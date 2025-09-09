@@ -1,14 +1,18 @@
 <template>
   <div 
-    class="card-flip w-full h-64 cursor-pointer"
+    class="card-flip w-full h-80 cursor-pointer"
     :class="{ 'flipped': isFlipped }"
     @click="flip"
   >
     <div class="card-flip-inner relative w-full h-full">
-      <div class="card-front absolute inset-0 bg-gradient-to-br from-rose-300 to-pink-400 rounded-lg shadow-lg flex items-center justify-center">
-        <div class="text-center p-4">
-          <div class="text-6xl mb-2">{{ emoji }}</div>
-          <h3 class="text-white font-dancing text-2xl">{{ title }}</h3>
+      <div class="card-front absolute inset-0 rounded-lg shadow-lg overflow-hidden">
+        <img 
+          :src="imageUrl" 
+          :alt="title"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end">
+          <h3 class="text-white font-dancing text-2xl p-4 w-full text-center">{{ title }}</h3>
         </div>
       </div>
       <div class="card-back absolute inset-0 bg-white rounded-lg shadow-lg flex items-center justify-center p-6">
@@ -27,7 +31,7 @@ import { ref } from 'vue'
 defineProps<{
   title: string
   message: string
-  emoji: string
+  imageUrl: string
 }>()
 
 const emit = defineEmits<{

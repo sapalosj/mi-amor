@@ -3,7 +3,7 @@
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-8">
         <h1 class="text-4xl md:text-5xl font-vibes text-rose-800 mb-4 animate-float">
-          Our Beautiful Journey
+          Our Six Years Journey
         </h1>
         <p class="text-rose-600 text-lg max-w-2xl mx-auto font-dancing">{{ galleryMessage }}</p>
       </div>
@@ -15,14 +15,14 @@
           <div class="text-6xl mb-4 animate-heartbeat">💕</div>
           <h2 class="text-3xl font-vibes text-rose-800 mb-3">Happy 6th Anniversary!</h2>
           <p class="text-gray-700 mb-6 font-dancing text-lg">
-            Here's to many more years of love, laughter, and beautiful memories together.
+            Here's to many more years of love and growth, thank you for making this day special.
           </p>
           <p class="text-rose-600 font-dancing text-xl">Forever yours,</p>
           <p class="text-rose-700 font-vibes text-2xl">With all my love ❤️</p>
         </div>
       </div>
 
-      <div class="mt-8 text-center">
+      <div class="mt-8 text-center">  
         <button
           @click="startOver"
           class="text-rose-500 hover:text-rose-600 underline"
