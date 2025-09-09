@@ -6,6 +6,11 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'dancing': ['Dancing Script', 'cursive'],
+        'vibes': ['Great Vibes', 'cursive'],
+        'parisienne': ['Parisienne', 'cursive'],
+      },
       colors: {
         'rose': {
           50: '#fff1f2',

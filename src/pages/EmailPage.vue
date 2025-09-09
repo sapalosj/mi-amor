@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen flex flex-col items-center justify-center p-4">
     <div class="text-center mb-8">
-      <h1 class="text-4xl md:text-5xl font-bold text-rose-800 mb-4">
+      <h1 class="text-4xl md:text-5xl font-vibes text-rose-800 mb-4">
         You've Got Mail! 💌
       </h1>
     </div>
@@ -23,7 +23,7 @@
       <transition name="unfold">
         <div v-if="isOpen" class="letter-container">
           <div class="letter bg-white p-8 rounded-lg shadow-2xl max-w-md">
-            <p class="text-gray-700 leading-relaxed whitespace-pre-line">{{ emailMessage }}</p>
+            <p class="text-gray-700 leading-relaxed whitespace-pre-line font-dancing text-lg">{{ emailMessage }}</p>
             <div class="mt-6 text-center">
               <button
                 @click="goToCards"

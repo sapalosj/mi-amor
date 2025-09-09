@@ -10,7 +10,7 @@
         stroke-width="0.5"
       />
     </svg>
-    <span class="absolute inset-0 flex items-center justify-center text-black font-bold text-xl" style="margin-top: -4px">{{ digit }}</span>
+    <span class="absolute inset-0 flex items-center justify-center text-black font-dancing font-bold text-2xl" style="margin-top: -4px">{{ digit }}</span>
   </button>
 </template>
 

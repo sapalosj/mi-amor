@@ -1,10 +1,10 @@
 <template>
   <div class="min-h-screen flex flex-col items-center justify-center p-4">
     <div class="text-center mb-8">
-      <h1 class="text-4xl md:text-5xl font-bold text-rose-800 mb-4 animate-float">
+      <h1 class="text-4xl md:text-5xl font-vibes text-rose-800 mb-4 animate-float">
         Enter Our Special Date
       </h1>
-      <p class="text-rose-600 text-lg">September 10th</p>
+      <p class="text-rose-600 text-lg font-dancing">September 10th</p>
     </div>
 
     <div class="mb-8">
@@ -15,7 +15,7 @@
           class="w-16 h-16 border-4 border-rose-400 rounded-lg flex items-center justify-center bg-white shadow-md transition-all duration-300"
           :class="{ 'bg-rose-100 scale-110': digit !== '' }"
         >
-          <span class="text-2xl font-bold text-rose-700">{{ digit || '•' }}</span>
+          <span class="text-2xl font-bold text-rose-700 font-dancing">{{ digit || '•' }}</span>
         </div>
       </div>
 

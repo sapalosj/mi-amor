@@ -2,10 +2,10 @@
   <div class="min-h-screen p-4 md:p-8">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-8">
-        <h1 class="text-4xl md:text-5xl font-bold text-rose-800 mb-4">
+        <h1 class="text-4xl md:text-5xl font-vibes text-rose-800 mb-4">
           Six Years, Six Memories
         </h1>
-        <p class="text-rose-600">Click each card to reveal a special message</p>
+        <p class="text-rose-600 font-dancing text-lg">Click each card to reveal a special message</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">

@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen p-4 md:p-8">
     <div class="max-w-4xl mx-auto">
-      <h1 class="text-3xl font-bold text-rose-800 mb-8 text-center">Admin Configuration</h1>
+      <h1 class="text-4xl font-vibes text-rose-800 mb-8 text-center">Admin Configuration</h1>
       
       <div v-if="!isAuthenticated" class="bg-white rounded-lg shadow-lg p-8">
         <h2 class="text-xl font-semibold mb-4 text-gray-700">Enter Admin Password</h2>
