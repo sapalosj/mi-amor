@@ -15,29 +15,29 @@ export interface GalleryImage {
 }
 
 export const useConfigStore = defineStore('config', () => {
-  const emailMessage = ref(localStorage.getItem('emailMessage') || 'My dearest love, on this special day...')
-  const galleryMessage = ref(localStorage.getItem('galleryMessage') || 'Six years of beautiful memories together...')
+  const emailMessage = ref(`Mi amor, on this special day may we remember all the moments that brought us closer together, and even the challenges that only made our bond stronger. You are not just my love, but my safe place, my joy, my bestfriend, and my greatest blessing.`)
+  const galleryMessage = ref('Six years of beautiful memories together...')
   const musicPlaying = ref(false)
   const audioElement = ref<HTMLAudioElement | null>(null)
   
   const cardMessages = ref<CardMessage[]>(
     JSON.parse(localStorage.getItem('cardMessages') || JSON.stringify([
-      { id: 1, title: 'First Year', message: 'The beginning of our journey...', imageUrl: '/images/card1.jpg' },
-      { id: 2, title: 'Adventures', message: 'All the places we\'ve been...', imageUrl: '/images/card2.jpg' },
-      { id: 3, title: 'Laughter', message: 'The joy you bring to my life...', imageUrl: '/images/card3.jpg' },
-      { id: 4, title: 'Growth', message: 'How we\'ve grown together...', imageUrl: '/images/card4.jpg' },
-      { id: 5, title: 'Dreams', message: 'Our future together...', imageUrl: '/images/card5.jpg' },
-      { id: 6, title: 'Forever', message: 'My love for you is eternal...', imageUrl: '/images/card6.jpg' }
+      { id: 1, title: 'First Year', message: 'The beginning of our journey, butterflies in my stomach, finally my long time highschool crush is mine feels unreal', imageUrl: '/images/card1.jpg' },
+      { id: 2, title: 'Adventures', message: "All our travels and food trips, no matter how big or small, have become precious memories that I will treasure forever. But even more than the places we’ve been or the meals we’ve shared, it is your hand in mine and your presence by my side that makes every moment unforgettable. With you, the simplest days turn into the most beautiful memories ", imageUrl: '/images/card2.jpg' },
+      { id: 3, title: 'Support', message: 'One thing I really love about us is the way we support each other, not just in our hobbies and passions, but in every part of life. You are my safe place, and with you by my side, even the hardest days feel easier and the best days feel even brighter', imageUrl: '/images/card3.jpg' },
+      { id: 4, title: 'Growth', message: 'Throughout the years, our relationship has faced challenges and differences, but one thing has always been clear,it has brought us growth and maturity, that molds for next chapters of our relationship.', imageUrl: '/images/card4.jpg' },
+      { id: 5, title: 'Dreams', message: "Remembering all the dreams we’ve shared,the family we want to build, the home we long to create, and the safe space we promised each other.", imageUrl: '/images/card5.jpg' },
+      { id: 6, title: 'Forever', message: 'The next chapter of our journey that we both look forward to, in God’s perfect time,the day we finally tie the knot. Mi amore, always remember this line “Loved you once, love you still, always have, always will”', imageUrl: '/images/card6.jpg' }
     ]))
   )
 
   const galleryImages = ref<GalleryImage[]>(
     JSON.parse(localStorage.getItem('galleryImages') || JSON.stringify([
-      { id: 1, url: '/images/gallery1.jpg', caption: 'Our first date' },
-      { id: 2, url: '/images/gallery2.jpg', caption: 'That special trip' },
-      { id: 3, url: '/images/gallery3.jpg', caption: 'Celebrating together' },
-      { id: 4, url: '/images/gallery4.jpg', caption: 'Everyday moments' },
-      { id: 5, url: '/images/gallery5.jpg', caption: 'Adventures await' },
+      { id: 1, url: '/images/gallery1.jpg', caption: 'Our first travel' },
+      { id: 2, url: '/images/gallery2.jpg', caption: 'Simple, but a truly special trip' },
+      { id: 3, url: '/images/gallery3.jpg', caption: 'Our first theater together' },
+      { id: 4, url: '/images/gallery4.jpg', caption: 'Random moments' },
+      { id: 5, url: '/images/gallery5.jpg', caption: 'My Safe Space' },
       { id: 6, url: '/images/gallery6.jpg', caption: 'Forever and always' }
     ]))
   )

@@ -10,11 +10,11 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
         <FlipCard
-          v-for="(card, index) in cards"
+          v-for="card in cards"
           :key="card.id"
           :title="card.title"
           :message="card.message"
-          :emoji="cardEmojis[index]"
+          :imageUrl="card.imageUrl"
           @flipped="onCardFlipped"
         />
       </div>
@@ -46,7 +46,6 @@ const store = useConfigStore()
 const cards = ref(store.cardMessages)
 const flippedCount = ref(0)
 
-const cardEmojis = ['💕', '✈️', '😊', '🌱', '✨', '♾️']
 
 const allFlipped = computed(() => flippedCount.value === cards.value.length)
 
