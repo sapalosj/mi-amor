@@ -30,6 +30,7 @@
         </div>
       </transition>
     </div>
+    <MusicControl v-if="store.musicPlaying" />
   </div>
 </template>
 
@@ -38,6 +39,7 @@ import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { useConfigStore } from '@/stores/config'
 import FlipCard from '@/components/FlipCard.vue'
+import MusicControl from '@/components/MusicControl.vue'
 
 const router = useRouter()
 const store = useConfigStore()

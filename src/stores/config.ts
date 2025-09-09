@@ -17,6 +17,8 @@ export interface GalleryImage {
 export const useConfigStore = defineStore('config', () => {
   const emailMessage = ref(localStorage.getItem('emailMessage') || 'My dearest love, on this special day...')
   const galleryMessage = ref(localStorage.getItem('galleryMessage') || 'Six years of beautiful memories together...')
+  const musicPlaying = ref(false)
+  const audioElement = ref<HTMLAudioElement | null>(null)
   
   const cardMessages = ref<CardMessage[]>(
     JSON.parse(localStorage.getItem('cardMessages') || JSON.stringify([
@@ -76,16 +78,53 @@ export const useConfigStore = defineStore('config', () => {
     }
   }
 
+  const initMusic = () => {
+    if (!audioElement.value) {
+      audioElement.value = new Audio('/music/captivated.mp3')
+      audioElement.value.loop = true
+      audioElement.value.volume = 0.5
+    }
+    return audioElement.value
+  }
+
+  const playMusic = () => {
+    const audio = initMusic()
+    audio.play().then(() => {
+      musicPlaying.value = true
+    }).catch(error => {
+      console.log('Audio playback failed:', error)
+    })
+  }
+
+  const pauseMusic = () => {
+    if (audioElement.value) {
+      audioElement.value.pause()
+      musicPlaying.value = false
+    }
+  }
+
+  const toggleMusic = () => {
+    if (musicPlaying.value) {
+      pauseMusic()
+    } else {
+      playMusic()
+    }
+  }
+
   return {
     emailMessage,
     galleryMessage,
     cardMessages,
     galleryImages,
     isAuthenticated,
+    musicPlaying,
     authenticate,
     updateEmailMessage,
     updateGalleryMessage,
     updateCardMessage,
-    updateGalleryImage
+    updateGalleryImage,
+    playMusic,
+    pauseMusic,
+    toggleMusic
   }
 })

@@ -31,6 +31,7 @@
         </button>
       </div>
     </div>
+    <MusicControl v-if="store.musicPlaying" />
   </div>
 </template>
 
@@ -39,6 +40,7 @@ import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useConfigStore } from '@/stores/config'
 import ImageGallery from '@/components/ImageGallery.vue'
+import MusicControl from '@/components/MusicControl.vue'
 
 const router = useRouter()
 const store = useConfigStore()
